@@ -1,53 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STI College Student Registration</title>
-    <link rel="stylesheet" href="registration.css">
-</head>
-<body>
-    <div class="container">
-        <form action="#" method="POST" class="registration-form">
-            <h1>STI College Student Registration</h1>
-            <div class="form-group">
-                <input type="text" name="name" placeholder="First Name" required>
-            </div>
-            <div class="form-group">
-                <input type="text" name="name" placeholder="Last Name" required>
-            </div>
-            <div class="form-group">
-                <input type="text" name="name" placeholder="Middle Name" required>
-            </div>
-            <div class="form-group">
-                <input type="email" name="email" placeholder="Email Address" required>
-            </div>
-            <div class="form-group">
-                <input type="tel" name="phone" placeholder="Contact Number" required>
-            </div>
-            <div class="form-group">
-                <select name="course" required>
-                    <option value="" disabled selected>Select Course</option>
-                    <option value="IT">Information Technology</option>
-                    <option value="CS">Computer Science</option>
-                    <option value="IS">Information Systems</option>
-                    <option value="IS">Tourism</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <input type="number" name="year_level" placeholder="Year Level" required>
-            </div>
-            <div class="form-group">
-                <button type="submit">Register</button>
-            </div>
+    <head>
+        <title>Student Registration Form - STI College Davao</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="design.css">
+        <script>
+            function showConfirmation() {
+                alert("You have successfully registered! An email will be sent to you in a few days.");
+            }
+        </script>
+    </head>
+    <body>
 
-            <div class="form-group">
-                <button onclick="window.location.href='index.html'" type="login">Login</button>
-            </div>
-        </form>
-    </div>
+        <div class="limiter">
+            <div class="container-login">
+                <div class="wrap-login">
+                    <form class="login-form validate-form" onsubmit="showConfirmation(); return false;">
+                        <span class="login-form-title">
+                            Student Registration
+                        </span>
+
+
+					<!-- Name -->
+					<div class="wrap-input validate-input" data-validate="Name is required">
+						<input class="input" type="text" name="Fname" required>
+						<span class="focus-input" data-placeholder="First Name"></span>
+					</div>
+
+                    <div class="wrap-input validate-input" data-validate="Name is required">
+						<input class="input" type="text" name="Lname" required>
+						<span class="focus-input" data-placeholder="Last Name"></span>
+					</div>
+
+                    <div class="wrap-input validate-input" data-validate="Name is required">
+						<input class="input" type="text" name="Mname" required>
+						<span class="focus-input" data-placeholder="Middle Name"></span>
+					</div>
+
+					<!-- Contact Number -->
+					<div class="wrap-input validate-input" data-validate="Valid contact number is required">
+						<input class="input" type="tel" name="contact" pattern="[0-9]{11}" required>
+						<span class="focus-input" data-placeholder="Contact Number"></span>
+					</div>
+
+                    <!-- Email Address -->
+					<div class="wrap-input validate-input" data-validate="Valid email is required">
+						<input class="input" type="email" name="email" required>
+						<span class="focus-input" data-placeholder="Email"></span>
+					</div>
+
+					<!-- Student ID -->
+					<div class="wrap-input validate-input" data-validate="Student ID is required">
+                        <input class="input" type="text" name="studentID" pattern="[0-9]+" title="Please enter only numbers" required>
+                        <span class="focus-input" data-placeholder="Student ID"></span>
+                    </div>
+
+					<!-- Address -->
+					<div class="wrap-input validate-input" data-validate="Address is required">
+						<input class="input" type="text" name="address" required>
+						<span class="focus-input" data-placeholder="Address"></span>
+					</div>
+
+					<!-- Sex -->
+					<div class="wrap-input validate-input" data-validate="Sex is required">
+						<select class="input" name="sex" required>
+							<option value="" disabled selected>Select Sex</option>
+							<option value="male">Male</option>
+							<option value="female">Female</option>
+						</select>
+						<span class="focus-input"></span>
+					</div>
+
+					<!-- Guardian -->
+					<div class="wrap-input validate-input" data-validate="Guardian is required">
+						<input class="input" type="text" name="guardian" required>
+						<span class="focus-input" data-placeholder="Guardian Name"></span>
+					</div>
+
+					<!-- Course -->
+					<div class="wrap-input validate-input" data-validate="Course is required">
+                        <select class="input" name="course" required>
+                            <option value="" disabled selected>Select a Course</option>
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Computer Engineering">Computer Engineering</option>
+                            <option value="BS in Information Technology (BSIT)">BS in Information Technology (BSIT)</option>
+                            <option value="BS in Business Administration (BSBA)">BS in Business Administration (BSBA)</option>
+                            <option value="BS in Hospitality Management (BSHM)">BS in Hospitality Management (BSHM)</option>
+                            <option value="BS in Tourism Management (BSTM)">BS in Tourism Management (BSTM)</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Arts & Sciences">Arts & Sciences</option>
+                            <option value="Maritime">Maritime</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+					<!-- Year Level -->
+					<div class="wrap-input validate-input" data-validate="Year Level is required">
+                        <input class="input" type="number" name="yearLevel" min="1" max="5" required>
+                        <span class="focus-input" data-placeholder="Year Level"></span>
+                    </div>
+
+					<div class="container-login-form-btn">
+						<div class="wrap-login-form-btn">
+							<button class="login-form-btn" type="submit">
+								Register
+							</button>
+						</div>
+					</div>
+
+                    <div class="text-center">
+						<span class="txt1">
+							Already have an account?
+						</span>
+
+						<a class="txt2" onclick="window.location.href='index.html'"">
+							Login
+						</a>
+
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>
-
- 
-

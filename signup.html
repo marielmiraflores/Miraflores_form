@@ -1,51 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="signup.css">
+	<title>Signup Form Design Neumorphism</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="design.css">
 </head>
 <body>
-    <div class="container">
-        <form action="#" method="POST" class="signup-form">
-            <h1>Sign Up</h1>
-            <div class="form-group">
-                <input type="text" name="first_name" placeholder="First Name" required>
-            </div>
-            <div class="form-group">
-                <input type="text" name="last_name" placeholder="Last Name" required>
-            </div>
-            <div class="form-group">
-                <label for="sex">Sex:</label>
-                <select name="sex" id="sex" required>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <input type="email" name="email" placeholder="Email Address" required>
-            </div>
-            <div class="form-group">
-                <label for="date">Birthday</label>
-                <input type="date" name="birthday" required>
-            </div>
-            <div class="form-group">
-                <input type="password" name="email" placeholder="Password" required>
-            </div>
-            <div class="form-group">
-                <input type="password" name="email" placeholder="Confirm Password" required>
-            </div>
-            <div class="form-group">
-                <button type="submit">Sign Up</button>
-            </div>
-            <div class="form-group">
-                <button onclick="window.location.href='index.html'" type="index">Login</button>
-            </div>
-        </form>
-    </div>
+
+	<div class="limiter">
+		<div class="container-login">
+			<div class="wrap-login">
+				<form class="login-form validate-form">
+					<span class="login-form-title">
+						Sign Up
+					</span>
+				
+					<div class="wrap-input validate-input" data-validate="First name is required">
+						<input class="input" type="text" name="first_name" required>
+						<span class="focus-input" data-placeholder="First Name"></span>
+					</div>
+
+					<div class="wrap-input">
+						<input class="input" type="text" name="middle_name">
+						<span class="focus-input" data-placeholder="Middle Name"></span>
+					</div>
+
+					<div class="wrap-input validate-input" data-validate="Last name is required">
+						<input class="input" type="text" name="last_name" required>
+						<span class="focus-input" data-placeholder="Last Name"></span>
+					</div>
+
+					<div class="wrap-input validate-input" data-validate="Sex is required">
+						<select class="input" name="sex" required>
+							<option value="" disabled selected>Sex</option>
+							<option value="male">Male</option>
+							<option value="female">Female</option>
+						</select>
+						<span class="focus-input" data-placeholder=""></span>
+					</div>
+
+					<div class="wrap-input validate-input" data-validate="Birthday is required">
+                        <input class="input" type="date" name="birthday" id="birthday" required>
+                        <span class="focus-input" data-placeholder="Birthday"></span>
+                    </div>
+
+                    <div class="wrap-input">
+                        <input class="input" type="email" name="email" id="email">
+                        <span class="focus-input" data-placeholder="Email"></span>
+                    </div>
+
+					<div class="wrap-input validate-input" data-validate="Password is required">
+						<input class="input" type="password" name="password" required>
+						<span class="focus-input" data-placeholder="Password"></span>
+					</div>
+
+					<div class="wrap-input validate-input" data-validate="Confirm password is required">
+						<input class="input" type="password" name="confirm_password" required>
+						<span class="focus-input" data-placeholder="Confirm Password"></span>
+					</div>
+
+					<div class="container-login-form-btn">
+						<div class="wrap-login-form-btn">
+							<button class="login-form-btn">
+								Sign Up
+							</button>
+						</div>
+					</div>
+
+					<div class="text-center">
+						<span class="txt1">
+							Already have an account?
+						</span>
+
+						<a class="txt2" onclick="window.location.href='index.html'">
+							Login
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
-
-
